@@ -817,7 +817,7 @@ if($row['image']){
 
                     
                       <?php
-                        $sql = "SELECT sum(savings) AS `total` FROM `comity` ";
+                        $sql = "SELECT sum(savings+others_fee) AS `total` FROM `comity_data` ";
                         
                         $result = mysqli_query($conn, $sql);
                         $data = mysqli_fetch_array($result);

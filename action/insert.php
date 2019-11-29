@@ -1,7 +1,7 @@
 
 <?php
 session_start();
-include('action/sql_config.php');
+include('sql_config.php');
 
 
 
@@ -20,12 +20,9 @@ if (isset($_SESSION["name"])) {
 
 if (isset($name)) {
 
-   ?>
 
-<!-- ==================================================== -->
 
-<?php
-include('action/sql_config.php');
+
 
 
 if(isset($_POST["m_name"], $_POST["f_name"])){
@@ -67,7 +64,7 @@ if ($conn->query($sql) === TRUE) {
 }
 
 
-header('location: single_view.php?id='. $last_id);
+header('location: ../single_view.php?id='. $last_id);
 
 
 

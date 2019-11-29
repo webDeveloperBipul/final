@@ -1,6 +1,6 @@
 
 <?php
-include('action/sql_config.php');
+include('sql_config.php');
 if(isset($_POST["premier_date"], $_POST["joma"])){
 $premier_date = mysqli_real_escape_string($conn, $_POST["premier_date"]);
 $name = mysqli_real_escape_string($conn, $_POST["name"]);
@@ -15,5 +15,5 @@ echo "data inserted";
 } else {
 echo "Error: " . $sql . "<br>" . $conn->error;
 }
-header('location: single_view.php?id='.$id);
+header('location: ../single_view.php?id='.$id);
 ?>

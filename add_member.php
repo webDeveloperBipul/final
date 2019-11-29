@@ -518,7 +518,7 @@ if($row['image']){
                     </div>
                     <div class="col-md-8 ">
                       <div class="user-form mt-3" ng-app="">
-                        <form action="insert.php" method="POST" enctype="multipart/form-data" autocomplete="off" onsubmit="return check_blank()">
+                        <form action="action/insert.php" method="POST" enctype="multipart/form-data" autocomplete="off" onsubmit="return check_blank()">
                           <div class="row justify-content-center" >
                             <div class="col-md-6" >
                               <input class="mt-3" id="m_name"  type="text" ng-model="name" name="m_name"  placeholder="নাম*">

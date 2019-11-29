@@ -606,7 +606,7 @@
                      <div class="col-md-3 custom-class col-sm-12 text-white mt-3 mb-2">
                         <h5>মোট আদায় : 
                            <?php
-                              $sql = "SELECT sum(joma) AS `total` FROM `member_premier_data` where current_id=$identy and name='$name'";
+                              $sql = "SELECT sum(joma) AS `total` FROM `member_premier_data` where current_id='$identy'";
                               
                               $result = mysqli_query($conn, $sql);
                               $data = mysqli_fetch_array($result);
@@ -624,7 +624,7 @@
                      <div class="col-md-3 col-sm-12 text-white mt-3 mb-2">
                         <h5>সঞ্চয় আদায় : 
                            <?php
-                              $sql = "SELECT sum(savings) AS `savings` FROM `member_premier_data` where current_id=$identy and name='$name'";
+                              $sql = "SELECT sum(savings) AS `savings` FROM `member_premier_data` where current_id='$identy'";
                               
                               $result = mysqli_query($conn, $sql);
                               $data = mysqli_fetch_array($result);
@@ -659,7 +659,7 @@
                               </button>
                            </div>
                            <div class="modal-body">
-                              <form  action="premier_data_insert.php" method="post" autocomplete="off">
+                              <form  action="action/premier_data_insert.php" method="post" autocomplete="off">
                                  <div class="form-group">
                                     <label for="datepicker" class="col-form-label">তারিখ:
                                     </label>
@@ -699,31 +699,33 @@
                      </div>
                   </div>
                   <?php
-                     $sql = "SELECT * FROM member_premier_data  where current_id='$identy' and name='$name'";
+                     $sql = "SELECT * FROM member_premier_data  where current_id='$identy'";
                      $res = $conn->query($sql);
                      if ($res->num_rows > 0) {
                      ?>  
-                  <table class="table table-dark table-striped">
-                     <thead class="">
+                  <table class="table table-dark table-bordered table-striped">
+                     <thead class="text-center">
                         <tr>
-                           <th>তারিখ
+                           <th width="15%">তারিখ
                            </th>
-                           <th>নাম
+                           <th width="20%">নাম
                            </th>
-                           <th>আদায়
+                           <th width="10%">আদায়
                            </th>
-                           <th>সঞ্চয়
+                           <th width="10%">সঞ্চয়
                            </th>
-                           <th>মোট টাকা
+                           <th width="10%">মোট টাকা
                            </th>
-                           <th>বিস্তারিত
+                           <th width="10%">বিস্তারিত
                            </th>
                         </tr>
                      </thead>
                      <?php
+                     echo "<tbody>";
                         // output data of each row
                         while ($row = $res->fetch_assoc()) {
-                        echo "<tr><td> " . $row["premier_date"] . " </td>
+                        echo "<tr>
+                        <td> " . $row["premier_date"] . " </td>
                         <td> " . $name . "</td>
                         <td> " . $row["joma"] . "</td>
                         <td> " . $row["savings"] . "</td>
@@ -735,6 +737,7 @@
                         echo "<h5 class='text-info text-center'>কিস্তি নিবন্ধনকৃত নেই</h5>";
                         }
                         $conn->close();
+                        echo "<tbody>";
                         ?>
                   </table>
                </div>
