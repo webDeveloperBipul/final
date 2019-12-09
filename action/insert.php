@@ -73,7 +73,7 @@ header('location: ../single_view.php?id='. $last_id);
   if (isset($_POST['img_upload'])) {
 
   	// image file directory
-  	$target = "images/members/".basename($image);
+  	$target = "../images/members/".basename($image);
 
   	if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
   		$msg = "Image uploaded successfully";

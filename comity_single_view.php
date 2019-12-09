@@ -787,49 +787,10 @@ echo "<h5 class='text-info text-center'>সঞ্চয় নিবন্ধনক
 
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.js">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="js/vendor/bootstrap/js/bootstrap.bundle.min.js">
-    </script>
-    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js">
-    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js">
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill">
-    </script>
-    <script type="text/javascript" src="js/main.js">
-    </script>
-    <script src="js/angular.js">
-    </script>
-    <script src="js/sweetalert2.all.min.js">
-    </script>
-    <script src="js/vendor/jquery-easing/jquery.easing.min.js">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.js">
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill">
-    </script>
-   
+  
 
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js">
-    </script>
- 
-    </body>
-  </html>
-<!-- ==================================================== -->
 <?php
+include('part/footer.php');
 }
 ?>
 <script>
